@@ -20,7 +20,7 @@ class OrderHistoryController extends GetxController {
     final SharedPreferences preferences = await SharedPreferences.getInstance();
     var auth = preferences.getString("token");
     final http.Response response = await http.get(
-      Uri.parse('http://68.178.175.87/api/order/history/lists/$auth'),
+      Uri.parse('https://hayawater.test-services.site/api/order/history/lists/$auth'),
     );
     print("=====>>history${response.body}");
     var data = orderHistoryModelFromJson(response.body);

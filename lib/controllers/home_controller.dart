@@ -23,7 +23,7 @@ class HomeController extends GetxController {
     var auth = preferences.getString("token");
 
     final http.Response response = await http.get(
-      Uri.parse('http://68.178.175.87/api/order/pending/lists/$auth'),
+      Uri.parse('https://hayawater.test-services.site/api/order/pending/lists/$auth'),
     );
     print("====>${response.body}");
     print("====>${response.statusCode}");

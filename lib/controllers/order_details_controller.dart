@@ -14,7 +14,7 @@ class OrderDetailsController extends GetxController {
     final SharedPreferences preferences = await SharedPreferences.getInstance();
     var auth = preferences.getString("token");
     final http.Response response = await http.get(
-      Uri.parse('http://68.178.175.87/api/order/detail/$id/$auth'),
+      Uri.parse('https://hayawater.test-services.site/api/order/detail/$id/$auth'),
     );
     print(response.body);
     print(response.statusCode);
@@ -40,7 +40,7 @@ class OrderDetailsController extends GetxController {
     // }
     final http.Response response = await http.get(
       Uri.parse(
-          'http://68.178.175.87/api/order/statusupdate/$id/$auth/$status'),
+          'https://hayawater.test-services.site/api/order/statusupdate/$id/$auth/$status'),
     );
     print("statusupdate");
     print(response.body);

@@ -14,9 +14,9 @@ class LoginController extends GetxController {
     loading = true;
     update();
     final SharedPreferences preferences = await SharedPreferences.getInstance();
-    var body = {'username': '9562505894', 'password': 'qwerty'};
+    var body = {'username': username, 'password': password};
     final http.Response response = await http.post(
-      Uri.parse('http://68.178.175.87/api/driver/login'),
+      Uri.parse('https://hayawater.test-services.site/api/driver/login'),
       body: body,
     );
     print('///////////sc${response.statusCode}');
